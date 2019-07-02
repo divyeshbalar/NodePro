@@ -1,0 +1,26 @@
+<%  include partials/header %>
+	<h2>Hi from ejs view</h2>
+	<h2><%= tempTitle %></h2>
+
+	<form method="POST" action="/user/adduser">
+	  First name:<br>
+	  <input type="text" name="firstname" value="Mickey">
+	  <br>
+	  Last name:<br>
+	  <input type="text" name="lastname" value="Mouse">
+	  <br><br>
+	  <input type="submit" value="Submit">
+	</form> 
+
+
+	<ol>
+		<% people.forEach((person) =>{%>
+
+			 <li>name = <%= person.name %> age = <%= person.age %> </li>
+
+		 <% }); %>
+	 </ol>
+
+
+
+<%  include partials/footer %>
